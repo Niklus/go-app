@@ -15,14 +15,14 @@ cd src
 go run main.go
 ```
 
-To build The application, run the following:
+To build the application, run the following:
 
 ```golang
 go build -o build/app main.go
 ```
 
 This will create an executable file named app in the build folder, 
-Which you can run with following:
+Which you can run with the following:
 
 ```bash
 ./build/app

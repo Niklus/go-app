@@ -2,22 +2,17 @@ package main
 
 import (
 	"fmt"
-	"go-app/handlers"
+	"go-app/routes"
 	"net/http"
-
-	"github.com/gorilla/mux"
 )
 
 func main() {
 	
-	r := mux.NewRouter()
+	router := routes.Router()
 	fs := http.FileServer(http.Dir("static"))
 	port := ":8080"
-
-	r.HandleFunc("/", handlers.HomeHandler).Methods("GET")
-	r.HandleFunc("/users/{id}", handlers.UserHandler).Methods("GET")
 	
-	http.Handle("/", r)
+	http.Handle("/", router)
 	http.Handle("/static/", http.StripPrefix("/static", fs))
 	
 	fmt.Printf("Starting server on port %s\n", port)
