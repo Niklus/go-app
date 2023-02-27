@@ -5,15 +5,19 @@ This simple app demonstrates routing, templating and file structure.
 
 ## Running the app
 
-After installing go, cd into src folder and run the following:
+After installing Golang, run the following:
 
 ```bash
+cd src
+```
+
+```golang
 go run main.go
 ```
 
 To build The application, run the following:
 
-```bash
+```golang
 go build -o build/app main.go
 ```
 
